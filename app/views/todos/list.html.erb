@@ -3,7 +3,9 @@
     <h1>¡Listos!</h1>
     <% @todos.each do |todo| %>
       <%if todo.completed == true %>
-      <p><%= todo.description %></p>
+        <ul>
+          <li><%= todo.description %></li>
+        </ul>
       <%end%>
     <%end%>
 
@@ -12,7 +14,9 @@
       <h1>Por completar...</h1>
     <% @todos.each do |todo| %>
       <%if todo.completed == false %>
-      <p><%= todo.description %></p>
+        <ul>
+          <li><%= todo.description %></li>
+        </ul>
       <%end%>
     <%end%>
     </div>
