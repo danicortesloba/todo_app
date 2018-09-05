@@ -1,4 +1,10 @@
-<h1>Item</h1>
+<h2>Item</h2>
   <%= @todo.description %>
-<h1>¿Completado?</h1>
-  <%= @todo.completed %>
+<h2>¿Tarea lista?</h2>
+<%if @todo.completed == true %>
+    <p><%= "¡Listo!" %></p>
+<%end%>
+
+<%if @todo.completed == false %>
+    <p><%= "¡Aún falta!" %></p>
+<%end%>
